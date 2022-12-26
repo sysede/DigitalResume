@@ -5,13 +5,14 @@ with open("style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
 #####################
+
+image = Image.open('profile-pic.png')
+st.image(image, width=200)
+
 # Header 
 st.write('''
 #   Danielle Syse
 ''')
-
-image = Image.open('profile-pic.png')
-st.image(image, width=200)
 
 
 #####################
@@ -51,11 +52,16 @@ def txt4(a, b):
 
 
 #####################
-st.markdown('''
+# --- Contact ---
+st.write('\n')
+st.subheader("Danielle Syse")
+st.write(
+    """
 Data Analytics Program Manager II, PgM for Google Cloud Open Source software projects with a detailed history in marketing and advertising.
 
 Ex-Amazonian.
-''')
+"""
+)
 
 ##################
 # --- Contact ---
