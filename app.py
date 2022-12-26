@@ -4,11 +4,6 @@ from PIL import Image
 with open("style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
-# --- PATH SETTINGS ---
-css_file = current_dir / "styles" / "main.css"
-resume_file = current_dir / "assets" / "CV.pdf"
-profile_pic = current_dir / "assets" / "profile-pic.png"
-
 # --- GENERAL SETTINGS ---
 PAGE_TITLE = "Digital CV | Danielle Syse"
 PAGE_ICON = ":wave:"
