@@ -3,21 +3,13 @@ from PIL import Image
 
 with open("style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
-    
-# --- LOAD CSS, PDF & PROFIL PIC ---
-with open("style.css") as f:
-    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
-with open("CV.pdf") as pdf_file:
-    PDFbyte = pdf_file.read()
-profile_pic = Image.open(profile_pic)
 
-# --- GENERAL SETTINGS ---
+#####################
 PAGE_TITLE = "Digital CV | Danielle Syse"
 PAGE_ICON = ":wave:"
 NAME = "Danielle Syse"
 DESCRIPTION = """
 Data Analytics Program Manager II, PgM for Google Cloud Open Source software projects with a detailed history in marketing and advertising.
-
 Ex-Amazonian.
 """
 EMAIL = "daniellesyse@gmail.com"
@@ -26,29 +18,45 @@ SOCIAL_MEDIA = {
     "GitHub": "https://github.com/sysede",
     "Twitter": "https://github.com/sysedanielle"
 }
-
-# --- HERO SECTION ---
-col1, col2 = st.columns(2, gap="small")
-with col1:
-    image = Image.open('profile-pic.png')
+image = Image.open('profile-pic.png')
 st.image(image, width=150)
 
-with col2:
-    st.title(NAME)
-    st.write(DESCRIPTION)
-    st.download_button(
-        label=" 📄 Download Resume",
-        data=PDFbyte,
-        file_name=CV.docx,
-        mime="application/octet-stream",
-    )
-    st.write("📫", EMAIL)
 
-# --- SOCIAL LINKS ---
-st.write('\n')
-cols = st.columns(len(SOCIAL_MEDIA))
-for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-    cols[index].write(f"[{platform}]({link})")
+#####################
+# Custom function for printing text
+
+def txt(a, b, c):
+  col1, col2, col3 = st.columns([7,6,4])
+  with col1:
+    st.markdown(a)
+  with col2:
+    st.markdown(b)
+  with col3:
+    st.markdown(c)
+
+def txt2(a, b, c):
+  col1, col2, col3 = st.columns([4,4,4])
+  with col1:
+    st.markdown(a)
+  with col2:
+    st.markdown(b)
+  with col3:
+    st.markdown(c)
+
+def txt3(a, b):
+  col1, col2 = st.columns([7,3])
+  with col1:
+    st.markdown(a)
+  with col2:
+    st.markdown(b)
+
+def txt4(a, b):
+  col1, col2 = st.columns([1,3])
+  with col1:
+    st.markdown(f'`{a}`')
+  with col2:
+    st.markdown(b)
+
 
 # --- EXPERIENCE & QUALIFICATIONS ---
 st.write('\n')
