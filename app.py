@@ -54,7 +54,7 @@ def txt4(a, b):
 #####################
 # --- Contact ---
 st.write('\n')
-st.subheader("Danielle Syse")
+st.subheader("About Me :wave:")
 st.write(
     """
 Data Analytics Program Manager II, PgM for Google Cloud Open Source software projects with a detailed history in marketing and advertising.
