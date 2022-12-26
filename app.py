@@ -7,8 +7,7 @@ with open("style.css") as f:
 #####################
 # Header 
 st.write('''
-# Danielle Syse
-##### *Resume* 
+#   Danielle Syse
 ''')
 
 image = Image.open('profile-pic.png')
