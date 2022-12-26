@@ -29,7 +29,7 @@ st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
 
 # --- LOAD CSS, PDF & PROFIL PIC ---
-with open(css_file) as f:
+with open("main.css") as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 with open(resume_file, "rb") as pdf_file:
     PDFbyte = pdf_file.read()
