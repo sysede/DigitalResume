@@ -103,7 +103,7 @@ st.subheader("Work History")
 st.write("---")
 
 # --- JOB 1
-st.write("🚧", "**Program Manager II - Google via Adecco**")
+st.write("1️⃣", "**Program Manager II - Google via Adecco**")
 st.write("01/2021 - Present")
 st.write(
     """
@@ -117,7 +117,7 @@ Program Manager for community growth and engagement for the Open Source projects
 
 # --- JOB 2
 st.write('\n')
-st.write("🚧", "**Creative & Campaign Manager | Amazon**")
+st.write("2️⃣", "**Creative & Campaign Manager | Amazon**")
 st.write("02/2021 - 01/2022")
 st.write(
     """
@@ -133,7 +133,7 @@ Primary POC  and project manager working directly with advertisers, external sta
 
 # --- JOB 3
 st.write('\n')
-st.write("🚧", "**Media Manager | Fusion92**")
+st.write("3️⃣", "**Media Manager | Fusion92**")
 st.write("01/2020 - 02/2021")
 st.write(
     """
@@ -148,7 +148,7 @@ Led paid search, paid social and sponsored search teams across 6 cost per goal &
 
 # --- JOB 4
 st.write('\n')
-st.write("🚧", "**Paid Search Manager | Good Apple**")
+st.write("4️⃣", "**Paid Search Manager | Good Apple**")
 st.write("05/2018 - 01/2020")
 st.write(
     """
@@ -166,12 +166,13 @@ st.subheader("Education & Accomplishments")
 st.write(
     """
 Northwestern University, Kellogg School of Business - Certificate in Agile Project Management
-- ► June 2022 - September 2022
+► June 2022 - September 2022
+
 University of Wisconsin - Madison - B.A. in Sociology with focus on Data Analysis")
-- ► September 2014 - May 2018
+► September 2014 - May 2018
 University of Wisconsin - Madison - B.A. in Journalism with dual concentrations in Strategic Communications and Reporting
-- ► September 2014 - May 2018
+► September 2014 - May 2018
 University of Wisconsin - Madison - minor in Digital Studies with focus on computer programming and data privacy
-- ► September 2014 - May 2018
+► September 2014 - May 2018
 """
 )
