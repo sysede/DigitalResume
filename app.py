@@ -1,15 +1,21 @@
+from pathlib import Path
+
 import streamlit as st
 from PIL import Image
 
-with open("style.css") as f:
-    st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
+# --- PATH SETTINGS ---
+current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
+css_file = current_dir / "styles" / "main.css"
+resume_file = current_dir / "assets" / "CV.pdf"
+profile_pic = current_dir / "assets" / "profile-pic.png"
 
-#####################
+# --- GENERAL SETTINGS ---
 PAGE_TITLE = "Digital CV | Danielle Syse"
 PAGE_ICON = ":wave:"
 NAME = "Danielle Syse"
 DESCRIPTION = """
 Data Analytics Program Manager II, PgM for Google Cloud Open Source software projects with a detailed history in marketing and advertising.
+
 Ex-Amazonian.
 """
 EMAIL = "daniellesyse@gmail.com"
@@ -18,45 +24,38 @@ SOCIAL_MEDIA = {
     "GitHub": "https://github.com/sysede",
     "Twitter": "https://github.com/sysedanielle"
 }
-image = Image.open('profile-pic.png')
-st.image(image, width=150)
+
+st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
 
-#####################
-# Custom function for printing text
+# --- LOAD CSS, PDF & PROFIL PIC ---
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+with open(resume_file, "rb") as pdf_file:
+    PDFbyte = pdf_file.read()
+profile_pic = Image.open(profile_pic)
 
-def txt(a, b, c):
-  col1, col2, col3 = st.columns([7,6,4])
-  with col1:
-    st.markdown(a)
-  with col2:
-    st.markdown(b)
-  with col3:
-    st.markdown(c)
+# --- HERO SECTION ---
+col1, col2 = st.columns(2, gap="small")
+with col1:
+    st.image(profile_pic, width=230)
 
-def txt2(a, b, c):
-  col1, col2, col3 = st.columns([4,4,4])
-  with col1:
-    st.markdown(a)
-  with col2:
-    st.markdown(b)
-  with col3:
-    st.markdown(c)
+with col2:
+    st.title(NAME)
+    st.write(DESCRIPTION)
+    st.download_button(
+        label=" 📄 Download Resume",
+        data=PDFbyte,
+        file_name=resume_file.name,
+        mime="application/octet-stream",
+    )
+    st.write("📫", EMAIL)
 
-def txt3(a, b):
-  col1, col2 = st.columns([7,3])
-  with col1:
-    st.markdown(a)
-  with col2:
-    st.markdown(b)
-
-def txt4(a, b):
-  col1, col2 = st.columns([1,3])
-  with col1:
-    st.markdown(f'`{a}`')
-  with col2:
-    st.markdown(b)
-
+# --- SOCIAL LINKS ---
+st.write('\n')
+cols = st.columns(len(SOCIAL_MEDIA))
+for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
+    cols[index].write(f"[{platform}]({link})")
 
 # --- EXPERIENCE & QUALIFICATIONS ---
 st.write('\n')
@@ -161,3 +160,4 @@ University of Wisconsin - Madison - minor in Digital Studies with focus on compu
 - ► September 2014 - May 2018
 """
 )
+
