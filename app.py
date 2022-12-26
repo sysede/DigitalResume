@@ -8,11 +8,11 @@ with open("style.css") as f:
 # Header 
 st.write('''
 # Danielle Elizabeth Syse
-## Welcome to my digital resume!
+#### Welcome to my digital resume!
 ''')
 
 image = Image.open('profile-pic.png')
-st.image(image, width=150)
+st.image(image, width=200)
 
 
 #####################
