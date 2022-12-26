@@ -3,29 +3,27 @@ from pathlib import Path
 import streamlit as st
 from PIL import Image
 
-with open("style.css") as f:
-    st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
-
 # --- PATH SETTINGS ---
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles" / "main.css"
 resume_file = current_dir / "assets" / "CV.pdf"
 profile_pic = current_dir / "assets" / "profile-pic.png"
 
-
 # --- GENERAL SETTINGS ---
 PAGE_TITLE = "Digital CV | Danielle Syse"
 PAGE_ICON = ":wave:"
 NAME = "Danielle Syse"
 DESCRIPTION = """
-DData Analytics Program Manager II, PgM for Google Cloud Open Source software projects with a detailed history in marketing and advertising. Ex-Amazonian.
+Data Analytics Program Manager II, PgM for Google Cloud Open Source software projects with a detailed history in marketing and advertising.
+
+Ex-Amazonian.
 """
 EMAIL = "daniellesyse@gmail.com"
 SOCIAL_MEDIA = {
     "LinkedIn": "https://linkedin.com/desyse",
     "GitHub": "https://github.com/sysede",
+    "Twitter": "https://github.com/sysedanielle"
 }
-
 
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
@@ -36,7 +34,6 @@ with open(css_file) as f:
 with open(resume_file, "rb") as pdf_file:
     PDFbyte = pdf_file.read()
 profile_pic = Image.open(profile_pic)
-
 
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap="small")
@@ -54,13 +51,11 @@ with col2:
     )
     st.write("📫", EMAIL)
 
-
 # --- SOCIAL LINKS ---
 st.write('\n')
 cols = st.columns(len(SOCIAL_MEDIA))
 for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
     cols[index].write(f"[{platform}]({link})")
-
 
 # --- EXPERIENCE & QUALIFICATIONS ---
 st.write('\n')
@@ -74,7 +69,6 @@ st.write(
 """
 )
 
-
 # --- SKILLS ---
 st.write('\n')
 st.subheader("Hard Skills")
@@ -85,7 +79,6 @@ st.write(
 - 📚 Marketing & Advertising: SEM, SEO, Social, Programmatic, Sponsored Search
 """
 )
-
 
 # --- WORK HISTORY ---
 st.write('\n')
@@ -153,12 +146,17 @@ Managed 13+ SEM accounts with a focus on keyword prioritization strategies acros
 # --- Education & Accomplishments ---
 st.write('\n')
 st.subheader("Education & Accomplishments")
-st.write("Northwestern University, Kellogg School of Business - Certificate in Agile Project Management")
-st.write("June 2022 - September 2022")
+st.write(
+    """
 
-st.write("University of Wisconsin - Madison - B.A. in Sociology with focus on Data Analysis")
-st.write("September 2014 - May 2018")
-st.write("University of Wisconsin - Madison - B.A. in Journalism with dual concentrations in Strategic Communications and Reporting")
-st.write("September 2014 - May 2018")
-st.write("University of Wisconsin - Madison - minor in Digital Studies with focus on computer programming and data privacy")
-st.write("September 2014 - May 2018")
+Northwestern University, Kellogg School of Business - Certificate in Agile Project Management
+- ► June 2022 - September 2022
+
+University of Wisconsin - Madison - B.A. in Sociology with focus on Data Analysis")
+- ► September 2014 - May 2018
+University of Wisconsin - Madison - B.A. in Journalism with dual concentrations in Strategic Communications and Reporting
+- ► September 2014 - May 2018
+University of Wisconsin - Madison - minor in Digital Studies with focus on computer programming and data privacy
+- ► September 2014 - May 2018
+"""
+)
