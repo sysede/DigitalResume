@@ -3,6 +3,13 @@ from PIL import Image
 
 with open("style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
+    
+# --- LOAD CSS, PDF & PROFIL PIC ---
+with open("style.css") as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+with open("cv.pdf, "rb") as pdf_file:
+    PDFbyte = pdf_file.read()
+profile_pic = Image.open(profile_pic)
 
 # --- GENERAL SETTINGS ---
 PAGE_TITLE = "Digital CV | Danielle Syse"
