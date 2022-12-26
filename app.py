@@ -20,8 +20,6 @@ SOCIAL_MEDIA = {
     "Twitter": "https://github.com/sysedanielle"
 }
 
-st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
-
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap="small")
 with col1:
