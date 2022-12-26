@@ -92,7 +92,7 @@ st.subheader("Hard Skills")
 st.write(
     """
 - 👩‍💻 Programming: HTML, CSS+, MySQL, R, Stata
-- 📊 Visulization: Adobe Creative, MS Excel, Plotly
+- 📊 Visulization: Adobe Creative, MS Excel, Data Studio
 - 📚 Marketing & Advertising: SEM, SEO, Social, Programmatic, Sponsored Search
 """
 )
