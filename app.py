@@ -71,6 +71,7 @@ st.subheader("Contact")
 txt4('LINKEDIN', 'https://linkedin.com/desyse')
 txt4('EMAIL', 'daniellesyse@gmail.com')
 txt4('GitHub', 'https://github.com/sysede')
+txt4('Resume', 'https://drive.google.com/file/d/1egaQshGizvbfNqfYgno0V1IHYjFJiDbM/view?usp=sharing')
 
 #####################
 # --- EXPERIENCE & QUALIFICATIONS ---
