@@ -62,7 +62,6 @@ Ex-Amazonian.
 # --- Contact ---
 st.write('\n')
 st.subheader("Contact")
-st.write(
 
 txt4('LINKEDIN', 'https://linkedin.com/desyse')
 txt4('EMAIL', 'daniellesyse@gmail.com')
