@@ -166,13 +166,13 @@ st.subheader("Education & Accomplishments")
 st.write(
     """
 Northwestern University, Kellogg School of Business - Certificate in Agile Project Management
-► June 2022 - September 2022
+- ► June 2022 - September 2022
 
 University of Wisconsin - Madison - B.A. in Sociology with focus on Data Analysis")
-► September 2014 - May 2018
+- ► September 2014 - May 2018
 University of Wisconsin - Madison - B.A. in Journalism with dual concentrations in Strategic Communications and Reporting
-► September 2014 - May 2018
+- ► September 2014 - May 2018
 University of Wisconsin - Madison - minor in Digital Studies with focus on computer programming and data privacy
-► September 2014 - May 2018
+- ► September 2014 - May 2018
 """
 )
