@@ -7,7 +7,7 @@ with open("style.css") as f:
 # --- LOAD CSS, PDF & PROFIL PIC ---
 with open("style.css") as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
-with open("cv.pdf, "rb") as pdf_file:
+with open("cv.pdf") as pdf_file:
     PDFbyte = pdf_file.read()
 profile_pic = Image.open(profile_pic)
 
@@ -38,7 +38,8 @@ with col2:
     st.write(DESCRIPTION)
     st.download_button(
         label=" 📄 Download Resume",
-        file_name="CV.pdf",
+        data=PDFbyte
+        file_name=CV.pdf,
         mime="application/octet-stream",
     )
     st.write("📫", EMAIL)
