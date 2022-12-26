@@ -53,23 +53,19 @@ def txt4(a, b):
 
 #####################
 st.markdown('''
-## PERSONAL INFORMATION
-''')
-
-st.markdown('''
 Data Analytics Program Manager II, PgM for Google Cloud Open Source software projects with a detailed history in marketing and advertising.
 
 Ex-Amazonian.
 ''')
 
 ##################
-
-st.markdown('''
-## Contact
-''')
+# --- Contact ---
+st.write('\n')
+st.subheader("Contact")
+st.write(
 
 txt4('LINKEDIN', 'https://linkedin.com/desyse')
-txt4('EMAIL', 'mailto:daniellesyse@gmail.com')
+txt4('EMAIL', 'daniellesyse@gmail.com')
 txt4('GitHub', 'https://github.com/sysede')
 
 #####################
